@@ -3,7 +3,7 @@ import { HelloWorldClient } from "./protogen/proto/hello_grpc_pb";
 import { credentials } from "grpc";
 
 const client = new HelloWorldClient(
-  "http://localhost:8080",
+  "localhost:50051",
   credentials.createInsecure()
 );
 const req = new HelloRequest();
@@ -13,5 +13,5 @@ client.sayHello(req, (err, response) => {
     console.error(err);
     return;
   }
-  console.log(response?.getMessage());
+  console.log("Server says:", response?.getMessage());
 });

@@ -6,7 +6,9 @@
   "scripts": {
     "watch": "tsc -w",
     "dev": "nodemon .",
-    "copy:proto": "cp -r ./src/protogen/ ./dist/protogen/"
+    "copy:proto": "cp -r ./src/protogen/ ./dist/protogen/",
+    "build": "tsc && yarn copy:proto",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",

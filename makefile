@@ -22,3 +22,9 @@ gen_go:
 	protoc \
 	--go-grpc_out=${OUT_GO_DIR} \
 	proto/hello.proto
+
+run_client:
+	cd ts; yarn; yarn build; yarn start
+
+run_server:
+	cd go; go run main.go
