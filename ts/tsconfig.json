@@ -6,6 +6,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "./dist",
+    "allowJs": true,
     "rootDir": "./src",
     "moduleResolution": "node",
     "removeComments": true,
